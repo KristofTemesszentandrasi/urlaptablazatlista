@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Utazási kérdőív</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" type="text/css" href="urlap.css" />
+    </head>
+    <body>
+    <a href="tablazatlista.html">Tovább a táblázathoz</a>    
+    <form>
+        <h1>Utazási kérdőív</h1>
+        <label for="Nev">Név</label><br>
+        <input class="margo" style="border:2px red solid" id="Nev" type="text" name="Nev" placeholder="Temesszentandrási Kristóf" required /><br>
+        <label for="Szul">Születési idő</label><br>
+        <input class="margo" style="border:2px green solid" id="Szul" type="date" name="Szuldat" value="1976-01-23" required /><br>
+        <label for="Email">Email címe</label><br>
+        <input class="margo" id="Email" type="email" name="Email" /><br>
+        <label for="Pass">Jelszó</label><br>
+        <input class="margo" id="Pass" type="password" name="Password" /><br>
+        <label for="irszam">Irányítószáma</label><br>
+        <input class="nagymargo" style="border:2px blue solid" id="irszam" type="text" name="Suly" placeholder="1012" required pattern="[1-9]\d\d\d" title="Négy számjegyet adjon meg!" /><br>
+        <fieldset id="field">
+            <legend class="rozsaszin">Járt-e már külföldön?</legend>
+        <input id="talp1" type="radio" name="kulfold" value="1" checked /><label for="talp1">Igen</label><br>
+        <input id="talp2" type="radio" name="kulfold" value="2" /><label for="talp2">Nem</label><br> 
+        </fieldset>
+        <h5 id="irjon">Írjon a külföldi útjairól:</h5>
+        <textarea class="rozsaszin" id="textarea" cols="40" rows="10">
+        </textarea><br>
+        <fieldset class="nagymargo">
+        <legend>Melyik kontinensen járt?</legend>
+        <input id="afrika" type="checkbox" name="afrika" checked><label for="afrika">Afrika</label><br>
+        <input id="azsia" type="checkbox" name="azsia" checked><label for="azsia">Ázsia</label><br>
+        <input id="amerika" type="checkbox" name="amerika" checked><label for="amerika">Amerika</label><br>
+        <input id="ausztralia" type="checkbox" name="ausztralia" checked><label for="ausztralia">Ausztrália</label><br>
+        </fieldset>
+        <h5>Mely közlekedési eszközökkel utazott már?</h5>
+        <select  class="nagymargo" multiple size="6">
+            <optgroup label="Szárazföldön">
+                <option value="1" selected>autó</option>
+                <option value="2">vonat</option>
+                <option value="3">riksa</option>
+            <optgroup label="Vízen">
+                    <option value="4">hajó</option>
+                    <option value="5">kenu</option>
+                    <option value="6">tengeralattjáró</option>    
+            </optgroup>
+        </select><br>
+        <input type="submit" value="Elküld" />
+        <input type="reset" value="Mégsem" />
+    </form>
+    </body>
+</html>
